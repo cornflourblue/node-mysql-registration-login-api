@@ -19,7 +19,7 @@ function authorize() {
                 return res.status(401).json({ message: 'Unauthorized' });
 
             // authorization successful
-            req.user = user;
+            req.user = user.get();
             next();
         }
     ];
